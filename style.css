@@ -305,13 +305,14 @@ footer .pattern img {
     height: 100%;
 }
 
-
 footer .social-media {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.3rem 0;
     border-bottom: 0.5px solid rgba(131, 125, 135, 0.5);
+    z-index: 2;
+    position: relative;
 }
 
 .social-icons {
@@ -344,7 +345,7 @@ footer .social-media {
 }
 
 .links dl {
-    justify-self: flex-start; 
+    justify-self: flex-start;
     font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -355,8 +356,7 @@ footer .social-media {
     padding-bottom: 2rem;
 }
 .links dd {
-    padding-bottom: .8rem;
-    transition:  3s;
+    padding-bottom: 0.8rem;
 }
 
 .links dd:hover,
