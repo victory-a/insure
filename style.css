@@ -1,0 +1,372 @@
+@import url("https://fonts.google.com/specimen/DM+Serif+Display");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --header-font: "DM Serif Display", serif;
+    --body-font: "Karla", serif;
+    --very-dark-violet: #2b272f;
+    --dark-violet: #2d2640;
+    --light-violet: #2c2640;
+    --grey-violet: #837d87;
+    --light-grey: #fafafa;
+    --red-border: 1px solid red;
+    --coral-backround: coral;
+}
+
+/* templates */
+html {
+    font-family: var(--body-font);
+    font-size: 10px;
+    color: var(--grey-violet);
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 3.9rem 0;
+}
+
+img,
+picture {
+    width: 100%;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2.4rem;
+}
+
+.pattern {
+    position: absolute;
+    height: 100%;
+}
+
+.btn {
+    font-size: 1.2rem;
+    font-family: var(--body-font);
+    padding: 0.9rem 2.2rem;
+    text-transform: uppercase;
+    transition: background 0.5s;
+    cursor: pointer;
+}
+
+.btn-light {
+    color: var(--very-dark-violet);
+    background: #fff;
+    border: 1px solid var(--very-dark-violet);
+}
+
+.btn-light:hover,
+.btn-light:focus {
+    color: #fff;
+    background: var(--very-dark-violet);
+}
+
+.btn-dark {
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+.btn-dark:hover,
+.btn-dark:focus {
+    color: var(--very-dark-violet);
+    background: #fff;
+    border: 1px solid var(--very-dark-violet);
+}
+
+/* header */
+header {
+    width: 100%;
+    background-color: #fff;
+    z-index: 2;
+}
+
+nav {
+    height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .nav-toggle {
+    display: none;
+}
+
+.nav-list {
+    list-style: none;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--grey-violet);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color 0.5s;
+}
+
+.nav-link:hover {
+    color: var(--dark-violet);
+}
+
+.nav-link button {
+    color: var(--very-dark-violet);
+    border: 1px solid var(--very-dark-violet);
+}
+
+/* hero section*/
+.hero {
+    width: 100%;
+    position: relative;
+    background: var(--dark-violet);
+}
+
+.hero .pattern {
+    max-height: 80%;
+    top: 0;
+    right: 0;
+    z-index: 3;
+}
+
+.hero .pattern img {
+    height: 100%;
+}
+
+.hero-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5rem 0;
+}
+
+.hero-content .hero-text {
+    color: #fff;
+    padding: 0 2rem 6rem 0;
+}
+
+.hero-text h3 {
+    font-family: var(--header-font);
+    font-size: 64px;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-top: 4rem;
+}
+
+.hero-text h3::before {
+    content: "";
+    width: 12rem;
+    height: 0.5px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-text p {
+    font-family: var(--body-font);
+    padding-bottom: 2rem;
+}
+
+.hero-content picture {
+    margin-bottom: -22rem;
+    z-index: 2;
+}
+
+/* main section */
+.main {
+    position: relative;
+    background: #fff;
+    padding-top: 20rem;
+}
+
+.main .pattern {
+    max-height: 40%;
+    top: -25%;
+    left: 0;
+}
+
+.first h3 {
+    font-family: var(--header-font);
+    font-size: 64px;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-top: 4rem;
+    color: var(--dark-violet);
+}
+
+.first h3::before {
+    content: "";
+    width: 12rem;
+    height: 0.5px;
+    background: var(--grey-violet);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    width: 95%;
+    padding: 5rem 0 6rem 0;
+}
+
+.feature img {
+    width: 6rem;
+    padding-bottom: 2rem;
+}
+
+.feature h5 {
+    font-family: var(--header-font);
+    font-size: 16px;
+    color: var(--dark-violet);
+    letter-spacing: 1px;
+    padding-bottom: 1.8rem;
+}
+
+.feature p {
+    font-size: 12px;
+}
+
+/* how we work */
+.how-we-work {
+    margin-bottom: 8em;
+}
+
+.how-we-work .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--dark-violet);
+    padding: 6rem 18rem 6rem 10rem;
+}
+
+.how-we-work .pattern {
+    max-height: 100%;
+    top: 0;
+    right: 0;
+}
+
+.how-we-work .pattern img {
+    height: 100%;
+}
+
+.how-we-work h3 {
+    font-family: var(--header-font);
+    font-size: 40px;
+    position: relative;
+    color: #fff;
+}
+
+.how-we-work button {
+    position: relative;
+    z-index: 3;
+}
+
+/* footer */
+footer {
+    background: var(--light-grey);
+    padding: 3.9rem 0;
+    position: relative;
+}
+
+footer .pattern {
+    max-height: 100%;
+    top: 0;
+    left: 0;
+}
+
+footer .pattern img {
+    height: 100%;
+}
+
+
+footer .social-media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem 0;
+    border-bottom: 0.5px solid rgba(131, 125, 135, 0.5);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    align-items: center;
+}
+
+.social-icons i {
+    padding: 0.8rem 0.6rem;
+    font-size: 2rem;
+    color: var(--grey-violet);
+    transition: color 0.5s;
+}
+
+.social-icons i:hover,
+.social-icons i:focus {
+    color: var(--dark-violet);
+}
+
+.links {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    position: relative;
+    z-index: 2;
+}
+
+.links dl {
+    justify-self: flex-start; 
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.links dt {
+    padding-bottom: 2rem;
+}
+.links dd {
+    padding-bottom: .8rem;
+    transition:  3s;
+}
+
+.links dd:hover,
+.links dd:focus {
+    text-decoration: underline;
+}
+
+.attribution {
+    text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+}
