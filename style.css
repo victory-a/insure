@@ -48,7 +48,7 @@ p {
 }
 
 .container {
-    width: 100%;
+    width: 90%;
     max-width: 120rem;
     margin: 0 auto;
     padding: 0 2.4rem;
@@ -64,7 +64,6 @@ p {
     font-family: var(--body-font);
     padding: 0.9rem 2.2rem;
     text-transform: uppercase;
-    transition: background 0.5s;
     cursor: pointer;
 }
 
@@ -72,18 +71,21 @@ p {
     color: var(--very-dark-violet);
     background: #fff;
     border: 1px solid var(--very-dark-violet);
+    transition: background 0.8s;
 }
 
 .btn-light:hover,
 .btn-light:focus {
     color: #fff;
     background: var(--very-dark-violet);
+    border: 1px solid #fff;
 }
 
 .btn-dark {
     color: #fff;
     background: transparent;
     border: 1px solid #fff;
+    transition: background 0.8s;
 }
 
 .btn-dark:hover,
@@ -113,7 +115,7 @@ nav .nav-toggle {
 
 .nav-list {
     list-style: none;
-    width: 40%;
+    width: 43%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -125,7 +127,7 @@ nav .nav-toggle {
     color: var(--grey-violet);
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    transition: color 0.5s;
+    transition: color 1s;
 }
 
 .nav-link:hover {
@@ -188,6 +190,7 @@ nav .nav-toggle {
 .hero-text p {
     font-family: var(--body-font);
     padding-bottom: 2rem;
+    line-height: 28px;
 }
 
 .hero-content picture {
@@ -250,6 +253,7 @@ nav .nav-toggle {
 
 .feature p {
     font-size: 12px;
+    line-height: 18px;
 }
 
 /* how we work */
@@ -264,6 +268,9 @@ nav .nav-toggle {
     align-items: center;
     background: var(--dark-violet);
     padding: 6rem 18rem 6rem 10rem;
+    /* max-width: 120rem;
+    width: 90%; */
+    /* max-width: inherit; */
 }
 
 .how-we-work .pattern {
@@ -326,7 +333,7 @@ footer .social-media {
     padding: 0.8rem 0.6rem;
     font-size: 2rem;
     color: var(--grey-violet);
-    transition: color 0.5s;
+    transition: color 1s;
 }
 
 .social-icons i:hover,
@@ -359,6 +366,10 @@ footer .social-media {
     padding-bottom: 0.8rem;
 }
 
+.links a {
+    color: var(--dark-violet);
+}
+
 .links dd:hover,
 .links dd:focus {
     text-decoration: underline;
@@ -366,7 +377,140 @@ footer .social-media {
 
 .attribution {
     text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+@media screen and (max-width: 768px) {
+    .features {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+    }
+
+    .feature {
+        margin-bottom: 5rem;
+        padding: 0 8rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .feature {
+        margin-bottom: 5rem;
+        padding: initial;
+    }
+
+    /* footer section */
+    footer {
+        padding: 6rem 0;
+    }
+
+    footer .pattern img {
+        height: 17%;
+    }
+
+    footer .social-media {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social-media > a {
+        padding-bottom: 1.5rem;
+    }
+
+    .links {
+        display: initial;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .links dl {
+        padding: 2rem;
+    }
 }
 
 @media screen and (max-width: 900px) {
+    section {
+        padding: initial;
+    }
+
+    .nav-list {
+        display: none;
+    }
+    
+    .hero .container {
+        padding: initial;
+        width: initial;
+    }
+
+    /* hero section  */
+    .hero .pattern {
+        bottom: -70%;
+        top: initial;
+    }
+
+    .hero .pattern img {
+        height: 30%;
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 0;
+    }
+
+    .hero-content picture {
+        margin-bottom: initial;
+        z-index: 2;
+    }
+
+    .hero-content .hero-text {
+        text-align: center;
+        padding: 10rem 3rem;
+    }
+
+    .hero-text h3 {
+        padding-top: initial;
+        font-size: 40px;
+    }
+
+    .hero-text h3::before {
+        display: none;
+    }
+
+    /* main section */
+    .main {
+        padding-top: 10rem;
+        text-align: center;
+    }
+
+    .main .pattern {
+        display: none;
+    }
+
+    .first h3 {
+        font-size: 40px;
+    }
+
+    .first h3::before {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 35%;
+    }
+
+    /* how we work section */
+    .how-we-work .container {
+        flex-direction: column;
+        padding: 6rem 2rem;
+        text-align: center;
+    }
+
+    .how-we-work h3 {
+        font-size: 40px;
+        padding-bottom: 3rem;
+    }
 }
