@@ -1,5 +1,5 @@
-@import url("https://fonts.google.com/specimen/DM+Serif+Display");
-@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+@import url('https://fonts.google.com/specimen/DM+Serif+Display');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 
 *,
 *::before,
@@ -10,8 +10,8 @@
 }
 
 :root {
-    --header-font: "DM Serif Display", serif;
-    --body-font: "Karla", serif;
+    --header-font: 'DM Serif Display', serif;
+    --body-font: 'Karla', serif;
     --very-dark-violet: #2b272f;
     --dark-violet: #2d2640;
     --light-violet: #2c2640;
@@ -97,7 +97,7 @@ p {
 
 /* header */
 header {
-    width: 100%;
+    width: 100vw;
     background-color: #fff;
     z-index: 2;
 }
@@ -109,7 +109,7 @@ nav {
     align-items: center;
 }
 
-nav .nav-toggle {
+.nav-toggle {
     display: none;
 }
 
@@ -138,6 +138,8 @@ nav .nav-toggle {
     color: var(--very-dark-violet);
     border: 1px solid var(--very-dark-violet);
 }
+
+
 
 /* hero section*/
 .hero {
@@ -171,14 +173,14 @@ nav .nav-toggle {
 
 .hero-text h3 {
     font-family: var(--header-font);
-    font-size: 64px;
+    font-size: 6.4rem;
     margin-bottom: 2rem;
     position: relative;
     padding-top: 4rem;
 }
 
 .hero-text h3::before {
-    content: "";
+    content: '';
     width: 12rem;
     height: 0.5px;
     background: #fff;
@@ -213,7 +215,7 @@ nav .nav-toggle {
 
 .first h3 {
     font-family: var(--header-font);
-    font-size: 64px;
+    font-size: 6.4rem;
     margin-bottom: 2rem;
     position: relative;
     padding-top: 4rem;
@@ -221,7 +223,7 @@ nav .nav-toggle {
 }
 
 .first h3::before {
-    content: "";
+    content: '';
     width: 12rem;
     height: 0.5px;
     background: var(--grey-violet);
@@ -245,14 +247,14 @@ nav .nav-toggle {
 
 .feature h5 {
     font-family: var(--header-font);
-    font-size: 16px;
+    font-size: 1.6rem;
     color: var(--dark-violet);
     letter-spacing: 1px;
     padding-bottom: 1.8rem;
 }
 
 .feature p {
-    font-size: 12px;
+    font-size: 1.2rem;
     line-height: 18px;
 }
 
@@ -268,9 +270,6 @@ nav .nav-toggle {
     align-items: center;
     background: var(--dark-violet);
     padding: 6rem 18rem 6rem 10rem;
-    /* max-width: 120rem;
-    width: 90%; */
-    /* max-width: inherit; */
 }
 
 .how-we-work .pattern {
@@ -285,7 +284,7 @@ nav .nav-toggle {
 
 .how-we-work h3 {
     font-family: var(--header-font);
-    font-size: 40px;
+    font-size: 4rem;
     position: relative;
     color: #fff;
 }
@@ -310,6 +309,24 @@ footer .pattern {
 
 footer .pattern img {
     height: 100%;
+}
+
+.back-to-top {
+    width: 7rem;
+    height: 7rem;
+    background-color: var(--light-violet);
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+.back-to-top i {
+    display: block;
+    color: #fff;
+    font-size: 2rem;
+    padding: 2rem 2.7rem;
 }
 
 footer .social-media {
@@ -353,7 +370,7 @@ footer .social-media {
 
 .links dl {
     justify-self: flex-start;
-    font-size: 12px;
+    font-size: 1.2rem;
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: 700;
@@ -390,13 +407,11 @@ footer .social-media {
         margin: auto;
     }
 
-    .feature {
+    /* .feature {
         margin-bottom: 5rem;
         padding: 0 8rem;
-    }
-}
+    } */
 
-@media screen and (max-width: 600px) {
     .feature {
         margin-bottom: 5rem;
         padding: initial;
@@ -438,10 +453,79 @@ footer .social-media {
         padding: initial;
     }
 
-    .nav-list {
+    header.container {
+        margin: 0;
+        position: relative;
+        padding: 0;
+    }
+
+    nav {
+        width: 100vw;
+        /* padding: 0 1.5rem; */
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav .nav-toggle {
+        display: initial;
+    }
+
+    .nav-toggle i {
+        font-size: 2.2rem;
+        cursor: pointer;
+        color: var(--dark-violet);
+    }
+
+    .nav-toggle i,
+    .nav-brand {
+        padding: 1rem 2rem;
+    }
+
+    .fa-times {
         display: none;
     }
     
+    .open .fa-bars {
+        display: none;
+    }
+
+    .open .fa-times {
+        display: initial;
+    }
+    
+    .open .nav-list {
+        transform: translateX(0);
+    }
+
+    .nav-list {
+        position: absolute;
+        flex-direction: column;
+        margin: initial;
+        width: 100vw !important;
+        margin: 0;
+        background: var(--dark-violet);
+        height: calc(100vh - 8rem);
+        top: 8rem;
+        z-index: 1500;
+        justify-content: space-evenly;
+        transform: translateX(-100%);
+        transition: transform 0.5s;
+    }
+
+    .nav-link {
+        color: #fff;
+        font-size: 1.5rem;
+    }
+
+    .nav-link:hover {
+        color: var(--grey-violet);
+    }
+
+    .nav-link button {
+        font-size: 1.5rem;
+    }
+
     .hero .container {
         padding: initial;
         width: initial;
@@ -455,6 +539,7 @@ footer .social-media {
 
     .hero .pattern img {
         height: 30%;
+        display: none;
     }
 
     .hero-content {
@@ -465,7 +550,7 @@ footer .social-media {
 
     .hero-content picture {
         margin-bottom: initial;
-        z-index: 2;
+        z-index: 0;
     }
 
     .hero-content .hero-text {
@@ -475,7 +560,7 @@ footer .social-media {
 
     .hero-text h3 {
         padding-top: initial;
-        font-size: 40px;
+        font-size: 4rem;
     }
 
     .hero-text h3::before {
@@ -493,7 +578,7 @@ footer .social-media {
     }
 
     .first h3 {
-        font-size: 40px;
+        font-size: 4rem;
     }
 
     .first h3::before {
@@ -510,7 +595,6 @@ footer .social-media {
     }
 
     .how-we-work h3 {
-        font-size: 40px;
         padding-bottom: 3rem;
     }
 }

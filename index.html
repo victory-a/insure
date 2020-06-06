@@ -17,7 +17,9 @@
                     <i class="fas fa-bars"></i>
                     <i class="fas fa-times"></i>
                 </div>
-                <a href="index.html" class="nav-brand"><img src="./images/logo.svg" alt="nav brand" /></a>
+                <span class="nav-brand"
+                    ><a href="index.html"><img src="./images/logo.svg" alt="nav brand" /></a
+                ></span>
                 <ul class="nav-list">
                     <li class="nav-item"><a href="" class="nav-link active">How we work</a></li>
                     <li class="nav-item"><a href="" class="nav-link">Blog</a></li>
@@ -29,8 +31,8 @@
             </nav>
         </header>
         <!-- Header ends  -->
-        <section class="hero">
-        <div class="pattern">
+        <section class="hero" id="hero">
+            <div class="pattern">
                 <picture>
                     <source media="(max-width: 900px)" srcset="./images/bg-pattern-intro-right-mobile.svg" />
                     <source media="(min-width: 901px)" srcset="./images/bg-pattern-intro-right-desktop.svg" />
@@ -123,6 +125,9 @@
                 </picture>
             </div>
             <div class="container">
+                <div class="back-to-top">
+                    <a href="#hero"><i class="fas fa-chevron-up"></i></a>
+                </div>
                 <div class="social-media">
                     <a href="index.html" class="nav-brand"><img src="./images/logo.svg" alt="nav brand" /></a>
                     <ul class="social-icons">
@@ -174,5 +179,6 @@
                 Built by <a href="https://github.com/victory-a">Victory</a>.
             </div>
         </footer>
+        <script src="main.js"></script>
     </body>
 </html>
