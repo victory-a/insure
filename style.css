@@ -311,24 +311,6 @@ footer .pattern img {
     height: 100%;
 }
 
-.back-to-top {
-    width: 7rem;
-    height: 7rem;
-    background-color: var(--light-violet);
-    position: absolute;
-    top: -3rem;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 50%;
-}
-
-.back-to-top i {
-    display: block;
-    color: #fff;
-    font-size: 2rem;
-    padding: 2rem 2.7rem;
-}
-
 footer .social-media {
     display: flex;
     justify-content: space-between;
