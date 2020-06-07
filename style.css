@@ -68,7 +68,6 @@ p {
 }
 
 .btn-light {
-    color: var(--very-dark-violet);
     background: #fff;
     border: 1px solid var(--very-dark-violet);
     transition: background 0.8s;
@@ -76,7 +75,6 @@ p {
 
 .btn-light:hover,
 .btn-light:focus {
-    color: #fff;
     background: var(--very-dark-violet);
     border: 1px solid #fff;
 }
@@ -95,6 +93,18 @@ p {
     border: 1px solid var(--very-dark-violet);
 }
 
+.btn-dark a {
+    color: inherit;
+}
+
+.btn-light a {
+    color: var(--very-dark-violet);
+}
+
+.btn-light:hover a {
+    color: #fff;
+}
+
 /* header */
 header {
     width: 100vw;
@@ -107,6 +117,9 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 85%;
+    max-width: 116rem;
+    margin: 0 auto;
 }
 
 .nav-toggle {
@@ -115,7 +128,7 @@ nav {
 
 .nav-list {
     list-style: none;
-    width: 43%;
+    width: 45%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -138,8 +151,6 @@ nav {
     color: var(--very-dark-violet);
     border: 1px solid var(--very-dark-violet);
 }
-
-
 
 /* hero section*/
 .hero {
@@ -173,7 +184,7 @@ nav {
 
 .hero-text h3 {
     font-family: var(--header-font);
-    font-size: 6.4rem;
+    font-size: 6.8rem;
     margin-bottom: 2rem;
     position: relative;
     padding-top: 4rem;
@@ -204,7 +215,7 @@ nav {
 .main {
     position: relative;
     background: #fff;
-    padding-top: 20rem;
+    padding-top: 30rem;
 }
 
 .main .pattern {
@@ -215,7 +226,7 @@ nav {
 
 .first h3 {
     font-family: var(--header-font);
-    font-size: 6.4rem;
+    font-size: 6.8rem;
     margin-bottom: 2rem;
     position: relative;
     padding-top: 4rem;
@@ -284,7 +295,7 @@ nav {
 
 .how-we-work h3 {
     font-family: var(--header-font);
-    font-size: 4rem;
+    font-size: 4.8rem;
     position: relative;
     color: #fff;
 }
@@ -292,6 +303,7 @@ nav {
 .how-we-work button {
     position: relative;
     z-index: 3;
+    padding: 1.2rem 2.5rem;
 }
 
 /* footer */
@@ -380,53 +392,9 @@ footer .social-media {
     z-index: 5;
 }
 
-@media screen and (max-width: 768px) {
-    .features {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 80%;
-        margin: auto;
-    }
-
-    /* .feature {
-        margin-bottom: 5rem;
-        padding: 0 8rem;
-    } */
-
-    .feature {
-        margin-bottom: 5rem;
-        padding: initial;
-    }
-
-    /* footer section */
-    footer {
-        padding: 6rem 0;
-    }
-
-    footer .pattern img {
-        height: 17%;
-    }
-
-    footer .social-media {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .social-media > a {
-        padding-bottom: 1.5rem;
-    }
-
-    .links {
-        display: initial;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-    }
-
-    .links dl {
-        padding: 2rem;
+@media screen and (max-width: 1200px) {
+    .main {
+        padding-top: 20rem;
     }
 }
 
@@ -467,7 +435,7 @@ footer .social-media {
     .fa-times {
         display: none;
     }
-    
+
     .open .fa-bars {
         display: none;
     }
@@ -475,7 +443,7 @@ footer .social-media {
     .open .fa-times {
         display: initial;
     }
-    
+
     .open .nav-list {
         transform: translateX(0);
     }
@@ -542,7 +510,7 @@ footer .social-media {
 
     .hero-text h3 {
         padding-top: initial;
-        font-size: 4rem;
+        font-size: 4.5rem;
     }
 
     .hero-text h3::before {
@@ -551,7 +519,7 @@ footer .social-media {
 
     /* main section */
     .main {
-        padding-top: 10rem;
+        padding-top: 12rem;
         text-align: center;
     }
 
@@ -560,7 +528,7 @@ footer .social-media {
     }
 
     .first h3 {
-        font-size: 4rem;
+        font-size: 4.5rem;
     }
 
     .first h3::before {
@@ -578,5 +546,56 @@ footer .social-media {
 
     .how-we-work h3 {
         padding-bottom: 3rem;
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .features {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+    }
+
+    /* .feature {
+        margin-bottom: 5rem;
+        padding: 0 8rem;
+    } */
+
+    .feature {
+        margin-bottom: 5rem;
+        padding: initial;
+    }
+
+    /* footer section */
+    footer {
+        padding: 6rem 0;
+    }
+
+    footer .pattern img {
+        height: 17%;
+    }
+
+    footer .social-media {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social-media > a {
+        padding-bottom: 1.5rem;
+    }
+
+    .links {
+        display: initial;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .links dl {
+        padding: 2rem;
     }
 }
